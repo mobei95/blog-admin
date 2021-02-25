@@ -8,6 +8,15 @@
     "lint": "vue-cli-service lint",
     "test": "echo 'git commit trigger husky pre-commit hook'"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+   "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.0.4",
