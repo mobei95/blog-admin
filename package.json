@@ -10,7 +10,7 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-   "lint-staged": {
+  "lint-staged": {
     "*.{js,vue}": [
       "vue-cli-service lint",
       "git add"
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/config-conventional": "^12.0.0",
     "@vue/cli-plugin-babel": "~5.0.0-alpha.5",
     "@vue/cli-plugin-eslint": "~5.0.0-alpha.5",
     "@vue/cli-plugin-router": "~5.0.0-alpha.5",
