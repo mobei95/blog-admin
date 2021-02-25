@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "echo 'git commit trigger husky pre-commit hook'"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -23,6 +24,7 @@
     "@vue/eslint-config-airbnb": "^5.3.0",
     "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.2.0"
+    "eslint-plugin-vue": "^7.2.0",
+    "husky": "^5.1.1"
   }
 }
