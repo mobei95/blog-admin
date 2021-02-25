@@ -8,8 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "npx --no-install commitlint --edit $1"
+    "pre-commit": "echo 'git commit trigger husky pre-commit hook'",
+//    "commit-msg": "npx --no-install commitlint --edit $1"
   },
   "lint-staged": {
     "*.{js,vue}": [
