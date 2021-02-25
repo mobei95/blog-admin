@@ -5,16 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "gitHooks": {
-    "pre-commit": "echo 'git commit trigger husky pre-commit hook'",
-//    "commit-msg": "npx --no-install commitlint --edit $1"
+    "lint": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "npm run lint",
-      "git add"
+    "*.js": [
+      "eslint --fix"
     ]
   },
   "dependencies": {
@@ -35,6 +30,7 @@
     "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.2.0",
-    "husky": "^5.1.1"
+    "husky": "^5.1.1",
+    "lint-staged": "^10.5.4"
   }
 }
