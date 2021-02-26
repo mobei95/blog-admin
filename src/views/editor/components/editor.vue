@@ -2,16 +2,23 @@
   <div id="editor" class="editor-com"></div>
 </template>
 <script>
-import { defineComponent, onMounted } from 'vue';
-import E from 'wangeditor';
+import { defineComponent, onMounted, onBeforeUnmount } from 'vue';
+import Editor from '../../../common/editor/index';
 
 export default defineComponent({
   name: 'editor-com',
   setup() {
+    let editorInstance;
     onMounted(() => {
-      const editor = new E('#editor');
-      console.log('editor ', editor);
-      editor.create();
+      editorInstance = new Editor({
+        toolbarSelector: '#editor',
+      });
+      console.log('editor ', editorInstance);
+    });
+
+    onBeforeUnmount(() => {
+      editorInstance.destroy();
+      editorInstance = null;
     });
 
     return {};

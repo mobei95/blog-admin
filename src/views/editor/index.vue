@@ -1,6 +1,5 @@
 <template>
   <div class="editor-page">
-    <p>编辑</p>
     <editor></editor>
   </div>
 </template>

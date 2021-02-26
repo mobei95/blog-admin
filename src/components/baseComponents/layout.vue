@@ -5,8 +5,8 @@
       <section class="section">
         <router-view/>
       </section>
-      <b-footer></b-footer>
     </div>
+    <b-footer></b-footer>
   </div>
 </template>
 <script>
@@ -29,7 +29,11 @@ export default defineComponent({
   .app-layout {
     width: 100%;
     .app-container {
-      .section {}
+      padding: 40px 20px;
+      .section {
+        width: 1334px;
+        margin: 0 auto;
+      }
     }
   }
 </style>
