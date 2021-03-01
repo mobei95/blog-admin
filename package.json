@@ -35,5 +35,6 @@
     "lint-staged": "^10.5.4",
     "node-sass": "^5.0.0",
     "sass-loader": "^11.0.1"
-  }
+  },
+  "__npminstall_done": false
 }

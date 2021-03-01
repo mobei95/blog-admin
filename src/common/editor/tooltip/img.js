@@ -4,25 +4,37 @@ const { $, Tooltip } = E;
 function createShowHideFn(editor) {
   let tooltip = Tooltip || null;
 
-  function showLinkTooltip($link) {
+  function showLinkTooltip($node) {
+    console.log('$node', $node);
+    const tooltipDom = document.querySelectorAll('.w-e-tooltip');
+    console.log('tooltipDom', tooltipDom);
     const config = [
       {
-        $elem: $(`<span>
-          翻转
-        </span>`),
+        $elem: $('<span>翻转</span>'),
         onClick: () => {
-          console.log('反转Click', $link);
+          console.log('反转Click', $node);
+          return true;
+        },
+      },
+      {
+        $elem: $('<span>旋转</span>'),
+        onClick: () => {
+          const rotate = $node.selector.style.transform;
+          const dom = $node.selector;
+          dom.style.transform = 'rotate(90deg)';
+          console.log('rotate', rotate);
           return true;
         },
       },
     ];
 
-    tooltip = new Tooltip(editor, $link, config);
+    tooltip = new Tooltip(editor, $node, config);
     tooltip.create();
   }
 
   function hideLinkTooltip() {
-    if (tooltip) {
+    console.log('tooltip', tooltip);
+    if (tooltip && tooltip.remove) {
       tooltip.remove();
       tooltip = null;
     }
